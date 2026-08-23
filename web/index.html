@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 اللغة العربية الشامل - الموسوعة اللغوية</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">اللغة العربية الشامل</span>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ابحث في الموسوعة العربية..." onkeyup="searchAll()">
+                <button class="search-btn" onclick="searchAll()">🔍</button>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#dictionaries">القواميس</a>
+                <a href="#books">الكتب</a>
+                <a href="#grammar">النحو</a>
+                <a href="#about">عن المشروع</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">موسوعة اللغة العربية الشاملة</h1>
+            <p class="hero-subtitle">قواميس • كتب • نحو • بلاغة • أدب • أمثال</p>
+            <div class="hero-search">
+                <input type="text" id="heroSearch" placeholder="ابحث عن كلمة أو قاعدة أو كتاب..." onkeyup="searchAll()">
+                <button onclick="searchAll()">بحث شامل</button>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">قواميس</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">كتاب</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">فئة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">كلمة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم القواميس -->
+    <section id="dictionaries" class="section">
+        <h2 class="section-title">📖 القواميس العربية</h2>
+        <p class="section-desc">أشهر القواميس العربية مع قواعد بيانات احترافية</p>
+        <div class="cards-grid" id="dictionariesGrid">
+            <!-- يتم ملؤها بواسطة JavaScript -->
+        </div>
+    </section>
+
+    <!-- قسم الكتب -->
+    <section id="books" class="section">
+        <h2 class="section-title">📚 كتب اللغة العربية</h2>
+        <p class="section-desc">45 كتاباً تخصصياً في 12 فئة</p>
+        <div class="cards-grid" id="booksGrid">
+            <!-- يتم ملؤها بواسطة JavaScript -->
+        </div>
+    </section>
+
+    <!-- قسم النحو -->
+    <section id="grammar" class="section">
+        <h2 class="section-title">📝 قواعد النحو</h2>
+        <div class="grammar-container">
+            <div class="grammar-card">
+                <h3>المرفوعات</h3>
+                <ul>
+                    <li>المبتدأ والخبر</li>
+                    <li>الفاعل</li>
+                    <li>نائب الفاعل</li>
+                </ul>
+            </div>
+            <div class="grammar-card">
+                <h3>المنصوبات</h3>
+                <ul>
+                    <li>المفعول به</li>
+                    <li>الحال</li>
+                    <li>التمييز</li>
+                </ul>
+            </div>
+            <div class="grammar-card">
+                <h3>المجرورات</h3>
+                <ul>
+                    <li>المجرور بحرف الجر</li>
+                    <li>المجرور بالإضافة</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم النتائج -->
+    <section id="results" class="section" style="display:none;">
+        <h2 class="section-title">🔍 نتائج البحث</h2>
+        <div id="searchResults" class="results-container"></div>
+    </section>
+
+    <!-- قسم عن المشروع -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">ℹ️ عن المشروع</h2>
+        <div class="about-content">
+            <p>موسوعة شاملة للغة العربية تجمع بين القواميس والكتب والدراسات اللغوية</p>
+            <p>مصممة للعمل على Android ومتصفح الويب</p>
+            <a href="https://github.com/bdeerabed95/arabic-language-app" target="_blank" class="github-link">
+                🔗 عرض على GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <p>© 2024 اللغة العربية الشامل - جميع الحقوق محفوظة</p>
+        <p>تطوير: Badeer Abed</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
